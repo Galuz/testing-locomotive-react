@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import { useRef } from 'react';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+import Header from './sections/Header';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+
 import './App.css';
 
 function App() {
+  const containerRef = useRef(null);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        {/* here will be placed the animation */}
+        <LocomotiveScrollProvider
+          options={
+            {
+              smooth: true,
+              // ... all available Locomotive Scroll instance options 
+            }
+          }
+          watch={
+            [
+              //..all the dependencies you want to watch to update the scroll.
+              //  Basicaly, you would want to watch page/location changes
+              //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+            ]
+          }
+          containerRef={containerRef}
         >
-          Learn React
-        </a>
-      </header>
+          <main data-scroll-container ref={containerRef}>
+            <Header></Header>
+          </main>
+      </LocomotiveScrollProvider>
     </div>
   );
 }
