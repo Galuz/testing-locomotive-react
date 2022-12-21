@@ -1,0 +1,39 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --border: dashed 1px rgba(255, 255, 255, 0.5);
+    --border-white: dashed 1px rgba(255, 255, 255, 1);
+    --transform-height-small: 6.94444vw;
+    --transform-height-medium: 13.88889vw;
+    --transform-height-big: 20.83333vw
+}
+
+@media (min-width: 992px) {
+    .c-hero_content_title_logo_letter:nth-child(1) {
+        transform: translateY(var(--transform-height-small))
+    }
+
+    .c-hero_content_title_logo_letter:nth-child(2) {
+        transform: translateY(var(--transform-height-big))
+    }
+
+    .c-hero_content_title_logo_letter:nth-child(3) {
+        transform: translateY(var(--transform-height-small))
+    }
+
+    .c-hero_content_title_logo_letter:nth-child(4) {
+        transform: translateY(var(--transform-height-medium))
+    }
+
+    .c-hero_content_title_logo_letter:nth-child(5) {
+        transform: translateY(var(--transform-height-big))
+    }
+
+    .c-hero_content_title_logo_letter:nth-child(6) {
+        transform: translateY(var(--transform-height-small))
+    }
+
+    .c-hero_content_title_logo_letter:nth-child(7) {
+        transform: translateY(var(--transform-height-medium))
+    }
+}

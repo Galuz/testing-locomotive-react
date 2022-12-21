@@ -1,8 +1,9 @@
 import React from 'react'
+import '../utils/styles/logoStyles.css';
 
 export default function Logo() {
   return (
-    <svg class="c-hero_content_title_logo_svg" aria-hidden="true" version="1.1" id="Layer_1" focusable="false" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 626.4 726.4">
+    <svg class="c-hero_content_title_logo_svg" viewBox="0 0 626.4 726.4">
         <g class="c-hero_content_title_logo_letter">
             <polygon points="32.9,0.9 0.8,0.9 0.8,138.9 44.9,138.9 72.5,111.1 32.9,111.1"></polygon>
         </g>
